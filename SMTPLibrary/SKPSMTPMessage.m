@@ -840,7 +840,7 @@ NSString *kSKPSMTPPartContentTransferEncodingKey = @"kSKPSMTPPartContentTransfer
     
     NSDate *now = [[NSDate alloc] init];
 	NSDateFormatter	*dateFormatter = [[NSDateFormatter alloc] init];
-	
+	dateFormatter.locale = [[NSLocale alloc]initWithLocaleIdentifier:@"en_US"];
 	[dateFormatter setDateFormat:@"EEE, dd MMM yyyy HH:mm:ss Z"];
 	
 	[message appendFormat:@"Date: %@\r\n", [dateFormatter stringFromDate:now]];
